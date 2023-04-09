@@ -20,4 +20,4 @@ for vs_size in vs_sizes:
 
 num_cpus = vm_size.number_of_cores
 ram_size = vm_size.memory_in_mb
-print(f"number of cpus is: {num_cpus}")
+print(f"ram size is: {ram_size}")
