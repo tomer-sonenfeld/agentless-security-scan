@@ -27,7 +27,7 @@ except Exception as e:
 
 print("Deleting disk")
 poller = compute_client.disks.begin_delete(resource_group_name=resource_group_name, disk_name=disk_to_delete.name)
-print("Waiting for disk delete to complete..")
+print("Waiting for disk deletion to complete..")
 try:
     poller.wait()
     print(poller.status())
