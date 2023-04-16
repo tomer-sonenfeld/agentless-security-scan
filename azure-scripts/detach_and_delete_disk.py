@@ -18,7 +18,7 @@ vm_of_disk.storage_profile.data_disks.remove(disk_to_delete)
 print("Updating VM")
 poller = compute_client.virtual_machines.begin_create_or_update(resource_group_name=resource_group_name,
                                                                 vm_name=vm_of_disk.name, parameters=vm_of_disk)
-print("Waiting for VM update to complete")
+print("Waiting for VM update to complete..")
 try:
     poller.wait()
     print(poller.status())
@@ -27,7 +27,7 @@ except Exception as e:
 
 print("Deleting disk")
 poller = compute_client.disks.begin_delete(resource_group_name=resource_group_name, disk_name=disk_to_delete.name)
-print("Waiting for disk delete to complete")
+print("Waiting for disk delete to complete..")
 try:
     poller.wait()
     print(poller.status())
